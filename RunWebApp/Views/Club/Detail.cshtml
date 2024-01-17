@@ -1,0 +1,105 @@
+﻿@using RunGroopWebApp.Models
+@model Club
+@{
+}
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light grayish-blue background */
+        color: #343a40; /* Dark text color */
+    }
+
+    .container {
+        padding-top: 30px; /* Add some top padding for better spacing */
+    }
+
+    h1,
+    h3 {
+        color: #dc3545; /* Red color for heading text */
+    }
+
+    p {
+        line-height: 1.6; /* Improve readability with increased line height */
+    }
+
+    .img-fluid {
+        border-radius: 8px; /* Add a slight border-radius to images for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow to images */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .related-projects img {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+        .related-projects img:hover {
+            transform: scale(1.05);
+        }
+</style>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <h1 class="my-4">
+        @Model.Title
+        <small class="text-muted">Secondary Text</small>
+    </h1>
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+        <div class="col-md-8">
+            <img class="img-fluid" src="@Model.Image" alt="">
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="my-3">@Model.Title</h3>
+            <p>@Model.Description</p>
+            <h3 class="my-3">Location</h3>
+            <ul>
+                <li>@Model.Address.City</li>
+                <li>@Model.Address.State</li>
+                <li>@Model.ClubCategory</li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- /.row -->
+    <!-- Related Projects Row -->
+    <h3 class="my-4">Related Projects</h3>
+
+    <div class="row related-projects">
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+                <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
+            </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+                <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
+            </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+                <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
+            </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+                <img class="img-fluid" src="https://via.placeholder.com/500x300" alt="">
+            </a>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
